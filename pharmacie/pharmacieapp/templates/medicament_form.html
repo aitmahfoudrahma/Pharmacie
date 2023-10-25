@@ -1,0 +1,40 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="{{ form.Nom_medic.id_for_label }}">Nom du médicament:</label>
+    {{ form.Nom_medic }}
+    <br>
+
+    <label for="{{ form.Lot_medic.id_for_label }}">Numéro de lot:</label>
+    {{ form.Lot_medic }}
+    <br>
+
+    <label for="{{ form.DCI.id_for_label }}">Dénomination Commune Internationale (DCI):</label>
+    {{ form.DCI }}
+    <br>
+
+    <label for="{{ form.Dosage_medic.id_for_label }}">Dosage:</label>
+    {{ form.Dosage_medic }}
+    <br>
+
+    <label for="{{ form.Prix_médic.id_for_label }}">Prix de vente:</label>
+    {{ form.Prix_médic }}
+    <br>
+
+    <label for="{{ form.Prix_achat.id_for_label }}">Prix d'achat:</label>
+    {{ form.Prix_achat }}
+    <br>
+
+    <label for="{{ form.Forme_medic.id_for_label }}">Forme du médicament:</label>
+    {{ form.Forme_medic }}
+    <br>
+
+    <label for="{{ form.Prémption_medic.id_for_label }}">Date de péremption:</label>
+    {{ form.Prémption_medic }}
+    <br>
+
+    <label for="{{ form.Quantite_medic.id_for_label }}">Quantité en stock:</label>
+    {{ form.Quantite_medic }}
+    <br>
+
+    <button type="submit">Ajouter le médicament</button>
+</form>

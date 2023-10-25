@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des fournisseurs</title>
+</head>
+<body>
+    <h1>Liste des fournisseurs</h1>
+    <table>
+        <tr>
+            <th>Nom du fournisseur</th>
+            <th>Adresse</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+        </tr>
+        {% for fournisseur in fournisseurs %}
+            <tr>
+                <td>{{ fournisseur.Nom_fournisseur }}</td>
+                <td>{{ fournisseur.Adresse_fournisseur }}</td>
+                <td>{{ fournisseur.Tel_fournisseur }}</td>
+                <td>{{ fournisseur.Mail_fournisseur }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Lot</th>
+            <th>DCI</th>
+            <th>Dosage</th>
+            <th>Prix Médic</th>
+            <th>Prix Achat</th>
+            <th>Forme</th>
+            <th>Prémption</th>
+            <th>Quantité</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for medicament in medicaments %}
+        <tr>
+            <td>{{ medicament.Nom_medic }}</td>
+            <td>{{ medicament.Lot_medic }}</td>
+            <td>{{ medicament.DCI }}</td>
+            <td>{{ medicament.Dosage_medic }}</td>
+            <td>{{ medicament.Prix_médic }}</td>
+            <td>{{ medicament.Prix_achat }}</td>
+            <td>{{ medicament.Forme_medic }}</td>
+            <td>{{ medicament.Prémption_medic }}</td>
+            <td>{{ medicament.Quantite_medic }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Ajouter le médicament</button>
+</form>
