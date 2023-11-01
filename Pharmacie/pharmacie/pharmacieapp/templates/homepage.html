@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+    <link rel="stylesheet" type="text/css" href="static/css/homepage.css">
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/vecteurs-libre/antecedents-medicaux-propres_53876-97927.jpg?w=1380&t=st=1698863667~exp=1698864267~hmac=373020ddd6ef93ea2bf3a0eaec7bf14f9daf46f95ff3e6b21ecd26876bfdb585');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: transparent;
+        }
+         .content {
+            text-align: center;
+            padding: 20px; /* Espace autour du contenu */
+        }
+
+        .view-buttons, .action-buttons {
+            text-align: center; /* Centrer le texte des boutons horizontalement */
+        }
+
+        .btn-primary {
+            background-color:   #2471a3 ; /* Changer la couleur des boutons "View" en #76d7c4 */
+        }
+
+        .btn-success {
+            background-color:   #229954 ; /* Changer la couleur des boutons "Add New" en vert */
+        }
+
+        .btn-warning {
+            background-color:  #e67e22; /* Changer la couleur des boutons "Make" en orange */
+        }
+    </style>
+    <div class="content">
+        <h1 style="font-weight: bold; font-family: cursive, sans-serif; font-size: 90px; color: #0e6251;text-shadow: 7px 5px 0  #a3e4d7 ;">
+            Welcome to the Pharmacy Management System
+        </h1>
+    </div>
+    <div>
+        <!-- View Buttons -->
+        <div class="view-buttons">
+            <a href="{% url 'medicament_list' %}" class="btn btn-primary">View Medicaments</a>
+            <a href="{% url 'fournisseur_list' %}" class="btn btn-primary">View Fournisseurs</a>
+            <a href="{% url 'clients_list' %}" class="btn btn-primary">View Clients</a>
+            <a href="{% url 'commandes_list' %}" class="btn btn-primary">View Commandes</a>
+            <a href="{% url 'ventes_list' %}" class="btn btn-primary">View Ventes</a>
+            <a href="{% url 'assurances_list' %}" class="btn btn-primary">View Assurances</a>
+        </div>
+
+        <!-- Decorative Divider -->
+        <div class="divider"></div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="{% url 'create_medicament' %}" class="btn btn-success">Add New Medicament</a>
+            <a href="{% url 'create_medicament' %}" class="btn btn-success">Add New Fournisseur</a>
+            <a href="{% url 'create_medicament' %}" class="btn btn-success">Add New Client</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="action-buttons">
+            <a href="{% url 'create_medicament' %}" class="btn btn-warning">Make an order</a>
+            <a href="{% url 'create_medicament' %}" class="btn btn-warning">Make a Sale</a>
+        </div>
+    </div>
+</body>
+</html>

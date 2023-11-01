@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un médicament</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/vecteurs-libre/antecedents-medicaux-propres_53876-97927.jpg?w=1380&t=st=1698863667~exp=1698864267~hmac=373020ddd6ef93ea2bf3a0eaec7bf14f9daf46f95ff3e6b21ecd26876bfdb585');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: transparent;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 62px;
+            color: #0b5345;
+            text-shadow: 7px 5px 0   #48c9b0;
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 20px;
+            color: #0b5345;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid #76d7c4;
+        }
+
+        button {
+            font-size: 20px;
+            background-color: #76d7c4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #48c9b0;
+        }
+    </style>
+
+    <h1>Ajouter un médicament</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.Nom_medic.id_for_label }}">Nom du médicament:</label>
+        {{ form.Nom_medic }}
+        <br>
+
+        <label for="{{ form.Lot_medic.id_for_label }}">Numéro de lot:</label>
+        {{ form.Lot_medic }}
+        <br>
+
+        <label for="{{ form.DCI.id_for_label }}">Dénomination Commune Internationale (DCI):</label>
+        {{ form.DCI }}
+        <br>
+
+        <label for="{{ form.Dosage_medic.id_for_label }}">Dosage:</label>
+        {{ form.Dosage_medic }}
+        <br>
+
+        <label for="{{ form.Prix_médic.id_for_label }}">Prix de vente:</label>
+        {{ form.Prix_médic }}
+        <br>
+
+        <label for="{{ form.Prix_achat.id_for_label }}">Prix d'achat:</label>
+        {{ form.Prix_achat }}
+        <br>
+
+        <label for="{{ form.Forme_medic.id_for_label }}">Forme du médicament:</label>
+        {{ form.Forme_medic }}
+        <br>
+
+        <label for="{{ form.Prémption_medic.id_for_label }}">Date de péremption:</label>
+        {{ form.Prémption_medic }}
+        <br>
+
+        <label for="{{ form.Quantite_medic.id_for_label }}">Quantité en stock:</label>
+        {{ form.Quantite_medic }}
+        <br>
+
+        <button type="submit">Ajouter le médicament</button>
+    </form>
+</body>
+</html>
